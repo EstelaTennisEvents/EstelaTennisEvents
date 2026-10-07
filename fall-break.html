@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Fall Break Gallery | Stella Dallas Tennis</title>
+  <title>Fall Break Event | Stella Dallas Tennis</title>
 
   <style>
 
@@ -126,15 +126,17 @@
       display: inline-block;
       margin-bottom: 30px;
       color: var(--green);
-      font-weight: bold;
       text-decoration: none;
+      font-weight: bold;
     }
 
     .back-link:hover {
       color: var(--dark-green);
     }
 
-    .gallery {
+    /* PHOTO GALLERY */
+
+    .photo-gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
@@ -145,6 +147,12 @@
       border-radius: 14px;
       overflow: hidden;
       box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .photo:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .14);
     }
 
     .photo img {
@@ -158,28 +166,6 @@
       padding: 15px 18px;
       color: var(--gray);
       font-size: 14px;
-    }
-
-    /* PLACEHOLDER */
-
-    .coming-soon {
-      background: white;
-      border-radius: 14px;
-      padding: 50px 25px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
-      margin-top: 20px;
-    }
-
-    .coming-soon h3 {
-      color: var(--green);
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .coming-soon p {
-      color: var(--gray);
-      line-height: 1.6;
     }
 
     /* FOOTER */
@@ -205,7 +191,7 @@
         font-size: 38px;
       }
 
-      .gallery {
+      .photo-gallery {
         grid-template-columns: 1fr;
       }
 
@@ -264,7 +250,7 @@
   </section>
 
 
-  <!-- PHOTOS -->
+  <!-- PHOTO GALLERY -->
 
   <main>
 
@@ -273,31 +259,100 @@
     </a>
 
 
-    <!--
-      YOUR FALL BREAK PHOTOS WILL GO HERE.
+    <div class="photo-gallery">
 
-      Once you upload photos to a folder named "fall-break",
-      you can add them like this:
+
+      <!-- PHOTO 1 -->
 
       <div class="photo">
-        <img src="fall-break/photo1.jpg" alt="Fall Break Tennis Event">
+
+        <img
+          src="fall-break/fall-break-1.jpg"
+          alt="Fall Break Tennis Event">
+
         <div class="photo-caption">
           Fall Break Tennis Event
         </div>
+
       </div>
-    -->
 
 
-    <div class="coming-soon">
+      <!-- PHOTO 2 -->
 
-      <h3>Fall Break Photos</h3>
+      <div class="photo">
 
-      <p>
-        Photos from our Fall Break tennis event will appear here.
-      </p>
+        <img
+          src="fall-break/fall-break-2.jpg"
+          alt="Fall Break Tennis Event">
+
+        <div class="photo-caption">
+          Fall Break Tennis Event
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 3 -->
+
+      <div class="photo">
+
+        <img
+          src="fall-break/fall-break-3.jpg"
+          alt="Fall Break Tennis Event">
+
+        <div class="photo-caption">
+          Fall Break Tennis Event
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 4 -->
+
+      <div class="photo">
+
+        <img
+          src="fall-break/fall-break-4.jpg"
+          alt="Fall Break Tennis Event">
+
+        <div class="photo-caption">
+          Fall Break Tennis Event
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 5 -->
+
+      <div class="photo">
+
+        <img
+          src="fall-break/fall-break-5.jpg"
+          alt="Fall Break Tennis Event">
+
+        <div class="photo-caption">
+          Fall Break Tennis Event
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 6 -->
+
+      <div class="photo">
+
+        <img
+          src="fall-break/fall-break-6.jpg"
+          alt="Fall Break Tennis Event">
+
+        <div class="photo-caption">
+          Fall Break Tennis Event
+        </div>
+
+      </div>
+
 
     </div>
-
 
   </main>
 
