@@ -225,7 +225,19 @@
       padding: 20px 24px;
       border-bottom: 1px solid var(--border);
     }
+    
+.schedule-link {
+  display: grid;
+  grid-template-columns: 150px 1fr 1fr;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+}
 
+.schedule-link:hover .schedule-event {
+  color: var(--green);
+}
     .schedule-row:last-child {
       border-bottom: none;
     }
