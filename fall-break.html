@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Gallery | Stella Dallas Tennis</title>
+  <title>Fall Break Gallery | Stella Dallas Tennis</title>
 
   <style>
+
     :root {
       --green: #0b5d3b;
       --dark-green: #073b28;
@@ -28,6 +29,8 @@
       background: var(--light);
       color: #17201b;
     }
+
+    /* HEADER */
 
     header {
       background: var(--green);
@@ -83,10 +86,12 @@
       color: var(--yellow);
     }
 
+    /* HERO */
+
     .hero {
       background: var(--dark-green);
       color: white;
-      padding: 60px 20px;
+      padding: 55px 20px;
     }
 
     .hero-inner {
@@ -95,7 +100,7 @@
     }
 
     .hero h2 {
-      font-size: 50px;
+      font-size: 48px;
       margin-bottom: 10px;
     }
 
@@ -106,63 +111,78 @@
     .hero p {
       color: #d5e4dc;
       font-size: 17px;
+      line-height: 1.6;
     }
+
+    /* MAIN */
 
     main {
       max-width: 1100px;
       margin: auto;
-      padding: 50px 20px 80px;
+      padding: 45px 20px 70px;
     }
 
-    .event-grid {
+    .back-link {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: var(--green);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--dark-green);
+    }
+
+    .gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      gap: 20px;
     }
 
-    .event-card {
-      background: white;
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.07);
-      transition: .2s;
+    .photo {
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
     }
 
-    .event-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,.12);
+    .photo img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
     }
 
-    .event-icon {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-
-    .event-card h3 {
-      color: var(--green);
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
-    .event-card p {
+    .photo-caption {
+      padding: 15px 18px;
       color: var(--gray);
-      margin-bottom: 22px;
-    }
-
-    .view-button {
-      display: inline-block;
-      background: var(--green);
-      color: white;
-      padding: 11px 17px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
       font-size: 14px;
     }
 
-    .view-button:hover {
-      background: var(--dark-green);
+    /* PLACEHOLDER */
+
+    .coming-soon {
+      background: white;
+      border-radius: 14px;
+      padding: 50px 25px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
+      margin-top: 20px;
     }
+
+    .coming-soon h3 {
+      color: var(--green);
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .coming-soon p {
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
 
     footer {
       background: var(--dark-green);
@@ -172,10 +192,9 @@
       font-size: 13px;
     }
 
-    @media (max-width: 800px) {
-      .event-grid {
-        grid-template-columns: 1fr;
-      }
+    /* MOBILE */
+
+    @media (max-width: 750px) {
 
       .header-inner {
         flex-direction: column;
@@ -183,13 +202,26 @@
       }
 
       .hero h2 {
-        font-size: 40px;
+        font-size: 38px;
       }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .photo img {
+        height: 260px;
+      }
+
     }
+
   </style>
 </head>
 
 <body>
+
+
+  <!-- HEADER -->
 
   <header>
 
@@ -207,7 +239,7 @@
       </div>
 
       <nav>
-        <a href="index.html">← Main Site</a>
+        <a href="gallery.html">← Back to Gallery</a>
       </nav>
 
     </div>
@@ -215,14 +247,16 @@
   </header>
 
 
+  <!-- HERO -->
+
   <section class="hero">
 
     <div class="hero-inner">
 
-      <h2>Photo <span>Gallery</span></h2>
+      <h2>Fall Break <span>Event</span></h2>
 
       <p>
-        Memories from our tournaments and events.
+        Photos and memories from our Fall Break tennis event.
       </p>
 
     </div>
@@ -230,76 +264,52 @@
   </section>
 
 
+  <!-- PHOTOS -->
+
   <main>
 
-    <div class="event-grid">
+    <a class="back-link" href="gallery.html">
+      ← Back to Event Galleries
+    </a>
 
-      <!-- LABOR DAY -->
 
-      <div class="event-card">
+    <!--
+      YOUR FALL BREAK PHOTOS WILL GO HERE.
 
-        <div class="event-icon">🎾</div>
+      Once you upload photos to a folder named "fall-break",
+      you can add them like this:
 
-        <h3>Labor Day Event</h3>
-
-        <p>
-          Photos from our Labor Day tennis event.
-        </p>
-
-        <a class="view-button" href="labor-day.html">
-          View Photos →
-        </a>
-
+      <div class="photo">
+        <img src="fall-break/photo1.jpg" alt="Fall Break Tennis Event">
+        <div class="photo-caption">
+          Fall Break Tennis Event
+        </div>
       </div>
+    -->
 
 
-      <!-- FALL BREAK -->
+    <div class="coming-soon">
 
-      <div class="event-card">
+      <h3>Fall Break Photos</h3>
 
-        <div class="event-icon">🎾</div>
-
-        <h3>Fall Break Event</h3>
-
-        <p>
-          Photos from our Fall Break event.
-        </p>
-
-        <a class="view-button" href="fall-break.html">
-          View Photos →
-        </a>
-
-      </div>
-
-
-      <!-- HOLIDAY -->
-
-      <div class="event-card">
-
-        <div class="event-icon">🎾</div>
-
-        <h3>Holiday Event</h3>
-
-        <p>
-          Photos from our holiday tournament.
-        </p>
-
-        <a class="view-button" href="holiday.html">
-          View Photos →
-        </a>
-
-      </div>
+      <p>
+        Photos from our Fall Break tennis event will appear here.
+      </p>
 
     </div>
 
+
   </main>
 
+
+  <!-- FOOTER -->
 
   <footer>
 
     © 2026 Stella Dallas Tennis • Court time is the best time.
 
   </footer>
+
 
 </body>
 
