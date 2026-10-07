@@ -145,11 +145,17 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, .14);
     }
 
-    .event-card img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      display: block;
+    /* EVENT ICON */
+
+    .event-image {
+      height: 250px;
+      background: var(--dark-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 130px;
+      line-height: 1;
     }
 
     .event-info {
@@ -195,6 +201,11 @@
         grid-template-columns: 1fr;
       }
 
+      .event-image {
+        height: 250px;
+        font-size: 110px;
+      }
+
     }
 
   </style>
@@ -207,7 +218,7 @@
 
   <header>
 
-
+```
 <div class="header-inner">
 
   <div class="logo">
@@ -226,7 +237,7 @@
   </nav>
 
 </div>
-
+```
 
   </header>
 
@@ -234,7 +245,7 @@
 
   <section class="hero">
 
-
+```
 <div class="hero-inner">
 
   <h2>Event <span>Galleries</span></h2>
@@ -244,7 +255,7 @@
   </p>
 
 </div>
-
+```
 
   </section>
 
@@ -252,78 +263,75 @@
 
   <main>
 
-
+```
 <div class="gallery-grid">
 
 
-<!-- LABOR DAY -->
+  <!-- LABOR DAY -->
 
-<a class="event-card" href="labor-day.html">
+  <a class="event-card" href="labor-day.html">
 
-  <div class="event-image">
-    🎾
-  </div>
+    <div class="event-image">
+      🎾
+    </div>
 
-  <div class="event-info">
+    <div class="event-info">
 
+      <h3>Labor Day Event Photos</h3>
 
-<h3>Labor Day Event Photos</h3>
+      <p>
+        Photos and memories from our Labor Day tennis event.
+      </p>
 
-<p>
-  Photos and memories from our Labor Day tennis event.
-</p>
+    </div>
 
-
-  </div>
-
-</a>
-
-<!-- FALL BREAK -->
-
-<a class="event-card" href="fall-break.html">
-
-  <div class="event-image">
-    🍂
-  </div>
-
-  <div class="event-info">
-
-<h3>Fall Break Event Photos</h3>
-
-<p>
-  Photos and memories from our Fall Break tennis event.
-</p>
-
-  </div>
-
-</a>
-
-<!-- WINTER BREAK -->
-
-<a class="event-card" href="holiday.html">
-
-  <div class="event-image">
-    ❄️
-  </div>
-
-  <div class="event-info">
+  </a>
 
 
-<h3>Winter Break Event Photos</h3>
+  <!-- FALL BREAK -->
 
-<p>
-  Photos and memories from our Winter Break event.
-</p>
+  <a class="event-card" href="fall-break.html">
+
+    <div class="event-image">
+      🍂
+    </div>
+
+    <div class="event-info">
+
+      <h3>Fall Break Event Photos</h3>
+
+      <p>
+        Photos and memories from our Fall Break tennis event.
+      </p>
+
+    </div>
+
+  </a>
 
 
-  </div>
+  <!-- WINTER BREAK -->
 
-</a>
+  <a class="event-card" href="holiday.html">
 
+    <div class="event-image">
+      ❄️
+    </div>
+
+    <div class="event-info">
+
+      <h3>Winter Break Event Photos</h3>
+
+      <p>
+        Photos and memories from our Winter Break event.
+      </p>
+
+    </div>
+
+  </a>
 
 
 </div>
-
+```
 
   </main>
 
@@ -331,9 +339,9 @@
 
   <footer>
 
-
+```
 © 2026 Stella Dallas Tennis • Court time is the best time.
-
+```
 
   </footer>
 
