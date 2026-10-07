@@ -30,6 +30,8 @@
       color: #17201b;
     }
 
+    /* HEADER */
+
     header {
       background: var(--green);
       color: white;
@@ -84,6 +86,8 @@
       color: var(--yellow);
     }
 
+    /* HERO */
+
     .hero {
       background: var(--dark-green);
       color: white;
@@ -107,7 +111,10 @@
     .hero p {
       color: #d5e4dc;
       font-size: 17px;
+      line-height: 1.6;
     }
+
+    /* MAIN */
 
     main {
       max-width: 1100px;
@@ -115,30 +122,84 @@
       padding: 45px 20px 70px;
     }
 
+    .section-title {
+      margin-bottom: 25px;
+    }
+
+    .section-title h3 {
+      font-size: 26px;
+      color: var(--dark-green);
+      margin-bottom: 6px;
+    }
+
+    .section-title p {
+      color: var(--gray);
+      font-size: 15px;
+    }
+
+    /* EVENT GALLERY CARDS */
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 20px;
     }
 
-    .photo {
-      background: white;
+    .event-card {
+      background: var(--white);
       border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,.08);
-      transition: transform .2s;
-    }
-
-    .photo:hover {
-      transform: translateY(-4px);
-    }
-
-    .photo img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
+      text-decoration: none;
+      color: #17201b;
+      transition: transform .2s, box-shadow .2s;
       display: block;
     }
+
+    .event-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .14);
+    }
+
+    .event-image {
+      height: 230px;
+      background: var(--dark-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--yellow);
+      font-size: 72px;
+    }
+
+    .event-content {
+      padding: 22px;
+    }
+
+    .event-content h3 {
+      color: var(--green);
+      font-size: 22px;
+      margin-bottom: 9px;
+    }
+
+    .event-content p {
+      color: var(--gray);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 17px;
+    }
+
+    .view-event {
+      display: inline-block;
+      color: var(--green);
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .event-card:hover .view-event {
+      color: var(--dark-green);
+    }
+
+    /* FOOTER */
 
     footer {
       background: var(--dark-green);
@@ -148,6 +209,8 @@
       font-size: 13px;
       opacity: .9;
     }
+
+    /* MOBILE */
 
     @media (max-width: 750px) {
 
@@ -164,8 +227,8 @@
         grid-template-columns: 1fr;
       }
 
-      .photo img {
-        height: 260px;
+      .event-image {
+        height: 220px;
       }
 
     }
@@ -174,6 +237,8 @@
 </head>
 
 <body>
+
+  <!-- HEADER -->
 
   <header>
 
@@ -199,6 +264,8 @@
   </header>
 
 
+  <!-- HERO -->
+
   <section class="hero">
 
     <div class="hero-inner">
@@ -206,7 +273,8 @@
       <h2>Photo <span>Gallery</span></h2>
 
       <p>
-        Memories from our tournaments, matches, and time on the court.
+        Memories from our tournaments, matches, special events,
+        and time on the court.
       </p>
 
     </div>
@@ -214,30 +282,83 @@
   </section>
 
 
+  <!-- GALLERY -->
+
   <main>
+
+    <div class="section-title">
+
+      <h3>Event Galleries</h3>
+
+      <p>
+        Select an event below to view photos and memories.
+      </p>
+
+    </div>
+
 
     <div class="gallery">
 
-      <div class="photo">
-        <img src="photos/tennis1.jpg" alt="Stella Dallas Tennis">
-      </div>
+      <!-- FALL BREAK GALLERY -->
 
-      <div class="photo">
-        <img src="photos/tennis2.jpg" alt="Stella Dallas Tennis">
-      </div>
+      <a class="event-card" href="Fall%20Break%20Event">
 
-      <div class="photo">
-        <img src="photos/tennis3.jpg" alt="Stella Dallas Tennis">
-      </div>
+        <div class="event-image">
+          🍂
+        </div>
 
-      <div class="photo">
-        <img src="photos/tennis4.jpg" alt="Stella Dallas Tennis">
-      </div>
+        <div class="event-content">
+
+          <h3>Fall Break Event</h3>
+
+          <p>
+            Photos and memories from our Fall Break tennis event.
+          </p>
+
+          <span class="view-event">
+            View Gallery →
+          </span>
+
+        </div>
+
+      </a>
+
+
+      <!--
+        FUTURE EVENT GALLERIES GO HERE.
+
+        Example:
+
+        <a class="event-card" href="Holiday%20Event">
+
+          <div class="event-image">
+            🎄
+          </div>
+
+          <div class="event-content">
+
+            <h3>Holiday Event</h3>
+
+            <p>
+              Photos and memories from our Holiday tennis event.
+            </p>
+
+            <span class="view-event">
+              View Gallery →
+            </span>
+
+          </div>
+
+        </a>
+      -->
+
 
     </div>
 
   </main>
 
+
+  <!-- FOOTER -->
 
   <footer>
 
