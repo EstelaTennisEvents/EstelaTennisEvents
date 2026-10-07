@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Photo Gallery | Stella Dallas Tennis</title>
+  <title>Event Galleries | Stella Dallas Tennis</title>
 
   <style>
 
@@ -122,30 +123,14 @@
       padding: 45px 20px 70px;
     }
 
-    .section-title {
-      margin-bottom: 25px;
-    }
-
-    .section-title h3 {
-      font-size: 26px;
-      color: var(--dark-green);
-      margin-bottom: 6px;
-    }
-
-    .section-title p {
-      color: var(--gray);
-      font-size: 15px;
-    }
-
-    /* EVENT GALLERY CARDS */
-
-    .gallery {
+    .gallery-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
     .event-card {
+      display: block;
       background: var(--white);
       border-radius: 14px;
       overflow: hidden;
@@ -153,50 +138,34 @@
       text-decoration: none;
       color: #17201b;
       transition: transform .2s, box-shadow .2s;
-      display: block;
     }
 
     .event-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       box-shadow: 0 8px 24px rgba(0, 0, 0, .14);
     }
 
-    .event-image {
+    .event-card img {
+      width: 100%;
       height: 230px;
-      background: var(--dark-green);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--yellow);
-      font-size: 72px;
+      object-fit: cover;
+      display: block;
     }
 
-    .event-content {
-      padding: 22px;
+    .event-info {
+      padding: 18px;
     }
 
-    .event-content h3 {
+    .event-info h3 {
       color: var(--green);
-      font-size: 22px;
-      margin-bottom: 9px;
+      margin-bottom: 7px;
+      font-size: 20px;
     }
 
-    .event-content p {
+    .event-info p {
       color: var(--gray);
       font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 17px;
-    }
-
-    .view-event {
-      display: inline-block;
-      color: var(--green);
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .event-card:hover .view-event {
-      color: var(--dark-green);
+      line-height: 1.5;
     }
 
     /* FOOTER */
@@ -207,7 +176,6 @@
       text-align: center;
       padding: 30px;
       font-size: 13px;
-      opacity: .9;
     }
 
     /* MOBILE */
@@ -223,17 +191,14 @@
         font-size: 38px;
       }
 
-      .gallery {
+      .gallery-grid {
         grid-template-columns: 1fr;
-      }
-
-      .event-image {
-        height: 220px;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
@@ -242,127 +207,130 @@
 
   <header>
 
-    <div class="header-inner">
+```
+<div class="header-inner">
 
-      <div class="logo">
+  <div class="logo">
 
-        <div class="ball">🎾</div>
+    <div class="ball">🎾</div>
 
-        <div>
-          <h1>Stella Dallas Tennis</h1>
-          <span>Friends • Tennis • Competition</span>
-        </div>
-
-      </div>
-
-      <nav>
-        <a href="index.html">← Back to Main Site</a>
-      </nav>
-
+    <div>
+      <h1>Stella Dallas Tennis</h1>
+      <span>Friends • Tennis • Competition</span>
     </div>
 
-  </header>
+  </div>
 
+  <nav>
+    <a href="index.html">Home</a>
+  </nav>
+
+</div>
+```
+
+  </header>
 
   <!-- HERO -->
 
   <section class="hero">
 
-    <div class="hero-inner">
+```
+<div class="hero-inner">
 
-      <h2>Photo <span>Gallery</span></h2>
+  <h2>Event <span>Galleries</span></h2>
 
-      <p>
-        Memories from our tournaments, matches, special events,
-        and time on the court.
-      </p>
+  <p>
+    Photos and memories from Stella Dallas Tennis events.
+  </p>
 
-    </div>
+</div>
+```
 
   </section>
 
-
-  <!-- GALLERY -->
+  <!-- EVENT GALLERIES -->
 
   <main>
 
-    <div class="section-title">
+```
+<div class="gallery-grid">
 
-      <h3>Event Galleries</h3>
+
+  <!-- LABOR DAY -->
+
+  <a class="event-card" href="labor-day.html">
+
+    <img
+      src="labor-day/labor-day-1.jpg"
+      alt="Labor Day Tennis Event">
+
+    <div class="event-info">
+
+      <h3>Labor Day</h3>
 
       <p>
-        Select an event below to view photos and memories.
+        Photos and memories from our Labor Day tennis event.
       </p>
 
     </div>
 
-
-    <div class="gallery">
-
-      <!-- FALL BREAK GALLERY -->
-
-      <a class="event-card" href="fall-break.html">
-
-        <div class="event-image">
-          🍂
-        </div>
-
-        <div class="event-content">
-
-          <h3>Fall Break Event</h3>
-
-          <p>
-            Photos and memories from our Fall Break tennis event.
-          </p>
-
-          <span class="view-event">
-            View Gallery →
-          </span>
-
-        </div>
-
-      </a>
+  </a>
 
 
-      <!--
-        FUTURE EVENT GALLERIES GO HERE.
+  <!-- FALL BREAK -->
 
-        Example:
+  <a class="event-card" href="fall-break.html">
 
-        <a class="event-card" href="Holiday%20Event">
+    <img
+      src="fall-break/fall-break-1.jpg"
+      alt="Fall Break Tennis Event">
 
-          <div class="event-image">
-            🎄
-          </div>
+    <div class="event-info">
 
-          <div class="event-content">
+      <h3>Fall Break</h3>
 
-            <h3>Holiday Event</h3>
-
-            <p>
-              Photos and memories from our Holiday tennis event.
-            </p>
-
-            <span class="view-event">
-              View Gallery →
-            </span>
-
-          </div>
-
-        </a>
-      -->
-
+      <p>
+        Photos and memories from our Fall Break tennis event.
+      </p>
 
     </div>
 
-  </main>
+  </a>
 
+
+  <!-- HOLIDAY -->
+
+  <a class="event-card" href="holiday.html">
+
+    <img
+      src="holiday/holiday-1.jpg"
+      alt="Holiday Tennis Event">
+
+    <div class="event-info">
+
+      <h3>Holiday Event</h3>
+
+      <p>
+        Photos and memories from our Holiday tennis event.
+      </p>
+
+    </div>
+
+  </a>
+
+
+</div>
+```
+
+  </main>
 
   <!-- FOOTER -->
 
   <footer>
 
-    © 2026 Stella Dallas Tennis • Court time is the best time.
+```
+© 2026 Stella Dallas Tennis • Court time is the best time.
+```
 
   </footer>
 
