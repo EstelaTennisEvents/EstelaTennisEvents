@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,6 +35,7 @@
     }
 
     /* HEADER */
+
     header {
       background: var(--court-green);
       color: white;
@@ -40,7 +43,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
     }
 
     .header-inner {
@@ -66,7 +69,7 @@
       align-items: center;
       justify-content: center;
       font-size: 23px;
-      box-shadow: 0 0 0 3px rgba(255,255,255,0.15);
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
     }
 
     .logo h1 {
@@ -95,9 +98,10 @@
     }
 
     /* HERO */
+
     .hero {
       background:
-        linear-gradient(rgba(7,59,40,0.92), rgba(11,93,59,0.92)),
+        linear-gradient(rgba(7, 59, 40, 0.92), rgba(11, 93, 59, 0.92)),
         linear-gradient(135deg, #0b5d3b, #073b28);
       color: white;
       padding: 70px 20px;
@@ -126,6 +130,7 @@
     }
 
     /* MAIN */
+
     main {
       max-width: 1100px;
       margin: auto;
@@ -150,114 +155,93 @@
       margin-top: 4px;
     }
 
-    /* TOURNAMENT CARDS */
-    .tournament-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+    /* TOURNAMENT FEATURE */
+
+    .tournament-feature {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 30px 0 40px;
     }
 
-    .tournament-card {
-      background: white;
-      border-radius: 14px;
-      padding: 25px;
-      border: 1px solid var(--border);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .tournament-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.09);
-    }
-
-    .date-badge {
-      display: inline-block;
-      background: var(--light-green);
-      color: var(--court-green);
-      font-size: 12px;
-      font-weight: bold;
-      text-transform: uppercase;
-      padding: 6px 10px;
-      border-radius: 20px;
-      margin-bottom: 15px;
-    }
-
-    .tournament-card h3 {
-      font-size: 21px;
-      margin-bottom: 12px;
-    }
-
-    .details {
-      color: var(--gray);
-      font-size: 14px;
-    }
-
-    .details div {
-      margin: 7px 0;
-    }
-
-    .status {
-      margin-top: 18px;
-      display: inline-block;
-      background: var(--tennis-yellow);
-      color: #253000;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: bold;
+    .tournament-feature-photo {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
     }
 
     /* SCHEDULE */
+
     .schedule {
-      background: white;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .schedule-row {
+    .schedule-link {
       display: grid;
-      grid-template-columns: 130px 1fr 180px;
+      grid-template-columns: 130px 1fr auto;
       align-items: center;
-      gap: 20px;
-      padding: 20px 24px;
-      border-bottom: 1px solid var(--border);
+      gap: 25px;
+      width: 100%;
+      background: var(--white);
+      border-radius: 14px;
+      padding: 24px 28px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      border-left: 6px solid var(--court-green);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    
-.schedule-link {
-  display: grid;
-  grid-template-columns: 150px 1fr 1fr;
-  width: 100%;
-  text-decoration: none;
-  color: inherit;
-  align-items: center;
-}
 
-.schedule-link:hover .schedule-event {
-  color: var(--green);
-}
-    .schedule-row:last-child {
-      border-bottom: none;
+    .schedule-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
     }
 
     .schedule-date {
+      background: var(--court-green);
+      color: white;
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-align: center;
+      font-size: 16px;
       font-weight: bold;
-      color: var(--court-green);
+      letter-spacing: 0.5px;
     }
 
     .schedule-event {
+      font-size: 24px;
       font-weight: bold;
+      color: var(--court-green);
+      margin-bottom: 5px;
     }
 
     .schedule-location {
+      font-size: 15px;
       color: var(--gray);
+    }
+
+    .schedule-location::before {
+      content: "📍 ";
+    }
+
+    .schedule-action {
+      color: var(--court-green);
       font-size: 14px;
-      text-align: right;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .schedule-action span {
+      color: var(--tennis-yellow);
+      font-size: 18px;
+      margin-left: 5px;
     }
 
     /* RESULTS */
+
     .results-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -293,6 +277,7 @@
     }
 
     /* INFO */
+
     .info-box {
       background: var(--court-green);
       color: white;
@@ -317,6 +302,7 @@
     }
 
     /* FOOTER */
+
     footer {
       background: var(--dark-green);
       color: white;
@@ -330,41 +316,48 @@
     }
 
     /* MOBILE */
+
     @media (max-width: 800px) {
+
       nav {
         display: none;
       }
 
-      .tournament-grid {
-        grid-template-columns: 1fr;
-      }
-
       .tournament-feature {
-width: 100vw;
-position: relative;
-left: 50%;
-transform: translateX(-50%);
-margin: 30px 0 40px;
-}
-
-.tournament-feature-photo {
-width: 100%;
-height: 420px;
-object-fit: cover;
-display: block;
-}
-
-      .results-grid {
-        grid-template-columns: 1fr;
+        margin-top: 25px;
+        margin-bottom: 30px;
       }
 
-      .schedule-row {
+      .tournament-feature-photo {
+        height: 300px;
+      }
+
+      .schedule-link {
         grid-template-columns: 1fr;
-        gap: 4px;
+        gap: 15px;
+        text-align: center;
+        padding: 22px;
+      }
+
+      .schedule-date {
+        width: 120px;
+        margin: 0 auto;
+      }
+
+      .schedule-event {
+        font-size: 22px;
       }
 
       .schedule-location {
-        text-align: left;
+        text-align: center;
+      }
+
+      .schedule-action {
+        margin-top: 5px;
+      }
+
+      .results-grid {
+        grid-template-columns: 1fr;
       }
 
       .info-box {
@@ -381,164 +374,88 @@ display: block;
       }
     }
   </style>
+
 </head>
 
 <body>
 
   <!-- HEADER -->
+
   <header>
-    <div class="header-inner">
 
-      <div class="logo">
-        <div class="tennis-ball">🎾</div>
+```
+<div class="header-inner">
 
-        <div>
-          <h1>Estela Tennis Events</h1>
-          <span>Friends • Tennis • Competition</span>
-        </div>
-      </div>
+  <div class="logo">
 
-<nav>
-  <a href="#tournaments">Tournaments</a>
-  <a href="#schedule">Schedule</a>
-  <a href="#results">Results</a>
-  <a href="gallery.html">📸 Gallery</a>
-</nav>
-
+    <div class="tennis-ball">
+      🎾
     </div>
-  </header>
 
-
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-inner">
-
-      <h2>
-        Let's get on the
-        <span>court.</span>
-      </h2>
-
-      <p>
-        Welcome to Estela Tennis Events. Check upcoming tournaments,
-        match schedules, and recent results all in one place.
-      </p>
-
+    <div>
+      <h1>Estela Tennis Events</h1>
+      <span>Friends • Tennis • Competition</span>
     </div>
+
   </div>
 
+  <nav>
+    <a href="#tournaments">Tournaments</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#results">Results</a>
+    <a href="gallery.html">📸 Gallery</a>
+  </nav>
+
+</div>
+```
+
+  </header>
+
+  <!-- HERO -->
+
+  <div class="hero">
+
+```
+<div class="hero-inner">
+
+  <h2>
+    Let's get on the
+    <span>court.</span>
+  </h2>
+
+  <p>
+    Welcome to Estela Tennis Events. Check upcoming tournaments,
+    match schedules, and recent results all in one place.
+  </p>
+
+</div>
+```
+
+  </div>
 
   <main>
 
+```
 <!-- UPCOMING TOURNAMENTS -->
 
 <section id="tournaments">
 
-<div class="section-heading"> <h2>Upcoming Tournaments</h2> <p>Mark your calendar and get ready to play.</p> </div>
+  <div class="section-heading">
 
-<!-- FULL-WIDTH TOURNAMENT PHOTO -->
-
-<div class="tournament-feature">
-
-<img
-  src="Winter-2026-event.jfif"
-  alt="Winter Classic Tournament"
-  class="tournament-feature-photo">
-
-</div>
-
-</div>
-
-<!-- SCHEDULE -->
-<section id="schedule">
-
-      <div class="section-heading">
-        <h2>Schedule</h2>
-        <p>See who is playing who.</p>
-      </div>
-  
-<div class="schedule">
-
-<a href="Winter-2026-schedule.docx" target="_blank" class="schedule-link">
-
-<div class="schedule-date">
-  DEC 5th
-</div>
-
-<div class="schedule-event">
-  Winter Classic
-</div>
-
-<div class="schedule-location">
-  Huffines Park
-</div>
-
-</a>
-
-</div>
-
-
-    <!-- RESULTS -->
-    <section id="results">
-
-      <div class="section-heading">
-        <h2>Recent Results</h2>
-        <p>See who came out on top.</p>
-      </div>
-
-      <div class="results-grid">
-
-        <div class="result-card">
-
-          <div class="result-label">
-            December Tournament
-          </div>
-
-          <div class="winner">
-            🏆 Tournament Winner
-          </div>
-
-          <p>
-            Add winner's name here
-          </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- GROUP INFO -->
-    <section>
-
-      <div class="info-box">
-
-        <div>
-          <h2>Estela Tennis Events</h2>
-
-          <p>
-            A group of friends who love tennis,
-            competition, and having a good time.
-          </p>
-        </div>
-
-        <div class="tennis-icon">
-          🎾
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer>
+    <h2>Upcoming Tournaments</h2>
 
     <p>
-      © 2026 Estela Tennis Events • Court time is the best time.
+      Mark your calendar and get ready to play.
     </p>
 
-  </footer>
+  </div>
 
-</body>
-</html>
+
+  <!-- FULL-WIDTH TOURNAMENT PHOTO -->
+
+  <div class="tournament-feature">
+
+    <img
+      src="Winter-2026-event.jfif"
+      alt="Winter Classic Tournament"
+```
