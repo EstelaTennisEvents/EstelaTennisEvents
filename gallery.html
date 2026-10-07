@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Photo Gallery | Stella Dallas Tennis</title>
+
+  <style>
+
+    :root {
+      --green: #0b5d3b;
+      --dark-green: #073b28;
+      --yellow: #dfff00;
+      --light: #f5f7f6;
+      --white: #ffffff;
+      --gray: #667085;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: #17201b;
+    }
+
+    header {
+      background: var(--green);
+      color: white;
+      padding: 18px 20px;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .ball {
+      width: 42px;
+      height: 42px;
+      background: var(--yellow);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 23px;
+    }
+
+    .logo h1 {
+      font-size: 21px;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 11px;
+      opacity: .8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--yellow);
+    }
+
+    .hero {
+      background: var(--dark-green);
+      color: white;
+      padding: 55px 20px;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 span {
+      color: var(--yellow);
+    }
+
+    .hero p {
+      color: #d5e4dc;
+      font-size: 17px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 45px 20px 70px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .photo {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,.08);
+      transition: transform .2s;
+    }
+
+    .photo:hover {
+      transform: translateY(-4px);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+
+    footer {
+      background: var(--dark-green);
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 13px;
+      opacity: .9;
+    }
+
+    @media (max-width: 750px) {
+
+      .header-inner {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero h2 {
+        font-size: 38px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .photo img {
+        height: 260px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="header-inner">
+
+      <div class="logo">
+
+        <div class="ball">🎾</div>
+
+        <div>
+          <h1>Stella Dallas Tennis</h1>
+          <span>Friends • Tennis • Competition</span>
+        </div>
+
+      </div>
+
+      <nav>
+        <a href="index.html">← Back to Main Site</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <h2>Photo <span>Gallery</span></h2>
+
+      <p>
+        Memories from our tournaments, matches, and time on the court.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <main>
+
+    <div class="gallery">
+
+      <div class="photo">
+        <img src="photos/tennis1.jpg" alt="Stella Dallas Tennis">
+      </div>
+
+      <div class="photo">
+        <img src="photos/tennis2.jpg" alt="Stella Dallas Tennis">
+      </div>
+
+      <div class="photo">
+        <img src="photos/tennis3.jpg" alt="Stella Dallas Tennis">
+      </div>
+
+      <div class="photo">
+        <img src="photos/tennis4.jpg" alt="Stella Dallas Tennis">
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    © 2026 Stella Dallas Tennis • Court time is the best time.
+
+  </footer>
+
+</body>
+
+</html>
